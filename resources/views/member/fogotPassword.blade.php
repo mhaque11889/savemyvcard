@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Save My V Card - Create & Share Digital Business Cards</title>
+  <meta name="description" content="Take control of your digital presence with Save My Vcard. Create and share stunning digital business cards instantly. Generate leads and exchange contact details seamlessly via WhatsApp." />
+  <meta name="keywords" content="digital business card, contact card creator, virtual business card, online business card, electronic business card, lead generation tool, capture leads online, business networking tool, generate leads from contacts, share business card, WhatsApp contact card, exchange contact details, digital contact sharing, mobile contact card, contact management tool, sales lead management, professional networking">
+  <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+  
+  <!-- Favicons -->
+  <link href="{{url('/img/favicon.png')}}" rel="icon">
+  <link href="{{url('/img/favicon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url('/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url('/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{url('/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{url('/vendor/quill/quill.snow.css')}}" rel="stylesheet">
+  <link href="{{url('/vendor/quill/quill.bubble.css')}}" rel="stylesheet">
+  <link href="{{url('/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{url('/vendor/simple-datatables/style.css')}}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{{url('/css/style.css')}}" rel="stylesheet">
+  <style>
+    .abcRioButtonLightBlue{
+      width: 100% !important;
+    }
+    .image-rings .ring_0 {
+        -webkit-animation: ring_1 2s 0s ease-out infinite;
+        animation: ring_1 2s 0s ease-out infinite;
+    }
+    .image-rings .ring_1 {
+        -webkit-animation: ring_1 2s .3s ease-out infinite;
+        animation: ring_1 2s .3s ease-out infinite;
+    }
+    .image-rings .ring_2 {
+        -webkit-animation: ring_1 2s .6s ease-out infinite;
+        animation: ring_1 2s .6s ease-out infinite;
+    }
+    .image-rings .ring_3 {
+        -webkit-animation: ring_1 2s .9s ease-out infinite;
+        animation: ring_1 2s .9s ease-out infinite;
+    }
+    .image-rings {
+        max-width: 597.69px;
+        width: 100%;
+        height: 100%;
+    }
+    .image-rings .ring {
+        position: absolute;
+        margin: auto;
+        display: block;
+        border-radius: 100%;
+        width: 478px;
+        height: 478px;
+        -webkit-transform: scale(.1, .1);
+        -ms-transform: scale(.1, .1);
+        transform: scale(.1, .1);
+        border: 0.829861px solid #6FD943;
+        z-index: -1;
+    }
+    @-webkit-keyframes ring_1 {
+        0% {
+            -webkit-transform: scale(.1, .1);
+            transform: scale(.1, .1);
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.8;
+        }
+
+        80% {
+            opacity: 0.5;
+        }
+
+
+        100% {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            opacity: 0;
+        }
+    }
+
+    @keyframes ring_1 {
+        0% {
+            -webkit-transform: scale(.1, .1);
+            transform: scale(.1, .1);
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.8;
+        }
+
+        80% {
+            opacity: 0.5;
+        }
+
+        100% {
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+            opacity: 0;
+        }
+    }
+    </style>
+</head>
+
+<body style="background: #022332;">
+
+  <main>
+    <div class="container">
+
+      <section class="section register min-vh-100 d-flex flex-column justify-content-center py-4">
+        <div class="container">
+            @if (session('message'))
+                <div class="alert alert-danger alert-dismissible fade show">
+                    {{ session('message') }}
+                </div>
+            @endif
+
+          <div class="row">
+            <div class="col-lg-5 col-md-6 d-flex flex-column align-items-center justify-content-center">
+              <div class="card mb-3">
+                <div class="card-body">
+                    <a href="{{url('/')}}"><i class="bi bi-house-fill"></i> Home</a>
+                    <div class="pt-4 pb-2">
+                        <h5 class="card-title text-center pb-0 fs-4">Save My V Card</h5>
+                        <p class="text-center small">Scan The Code below from your registered whatsapp number.</p>
+                    </div>
+                    <div class="pb-2" style="text-align: center">
+                        <img src="{{url('/img/KNFFVHOEXF7JL1.png')}}" alt="QR Code" width="200px"/>
+                    </div>
+                    <div class="pb-2" style="text-align: center">
+                        <a href="https://wa.me/message/KNFFVHOEXF7JL1" target="_blank">Click Here</a> if you are using from your own mobile device.
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <a href="{{url('/register')}}"><button class="btn btn-warning w-100" type="button">Register</button></a>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <a href="{{url('/signin')}}"><button class="btn btn-primary w-100" type="button">Login</button></a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7 col-mg-6" >
+                <div class="image-rings" style="background-image: url({{url('/img/vcardgo-video-banner.png')}}); background-size: contain; background-repeat:no-repeat">
+                    <div class="ring_0 ring"></div>
+                    <div class="ring_1 ring"></div>
+                    <div class="ring_2 ring"></div>
+                    <div class="ring_3 ring"></div>
+                </div>
+            </div>
+          </div>         
+        </div>
+
+      </section>
+
+    </div>
+  </main><!-- End #main -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Vendor JS Files -->
+  <script src="{{url('/vendor/apexcharts/apexcharts.min.js')}}"></script>
+  <script src="{{url('/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url('/vendor/chart.js/chart.min.js')}}"></script>
+  <script src="{{url('/vendor/echarts/echarts.min.js')}}"></script>
+  <script src="{{url('/vendor/quill/quill.min.js')}}"></script>
+  <script src="{{url('/vendor/simple-datatables/simple-datatables.js')}}"></script>
+  <script src="{{url('/vendor/tinymce/tinymce.min.js')}}"></script>
+  <script src="{{url('/vendor/php-email-form/validate.js')}}"></script>
+
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{url('/js/main.js')}}"></script>
+  <script>
+   
+  </script> 
+  
+</body>
+
+</html>
